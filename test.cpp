@@ -37,12 +37,12 @@ TEST(CountTest, ManySpaces) {
 TEST(EchoTest, SpecialChars) {
     char* test_val[6];
     test_val[0] = "./c-echo-count";
-    test_val[1] = "!";
+    test_val[1] = "*";
     test_val[2] = "@";
     test_val[3] = "#";
     test_val[4] = "$";
     test_val[5] = "%";
-    EXPECT_EQ("! @ # $ %", echo(6,test_val));
+    EXPECT_EQ("* @ # $ %", echo(6,test_val));
 }
 
 TEST(EchoTest, AlphaNumericStrings) {
@@ -58,5 +58,3 @@ int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
-
-
